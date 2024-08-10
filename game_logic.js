@@ -31,6 +31,11 @@ function boxClicked(e) {
         count_plays++
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
     }
+
+    if(count_plays === 9) {
+        playerText.innerHTML = 'Game Draw!'
+        boxes.forEach(box => box.style.color = 'red')
+    }
 }
 
 const winningCombos = [
@@ -59,10 +64,11 @@ restartBtn.addEventListener('click', restart)
 
 function restart() {
     spaces.fill(null)
-
+    count_plays = 0
     boxes.forEach( box => {
         box.innerText = ''
         box.style.backgroundColor=''
+        box.style.color = '#f2c14e'
     })
 
     playerText.innerHTML = 'Tic Tac Toe'
