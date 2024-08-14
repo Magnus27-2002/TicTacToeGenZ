@@ -8,7 +8,12 @@ const O_TEXT = "O"
 const X_TEXT = "X"
 let currentPlayer = X_TEXT
 let spaces = Array(9).fill(null)
-let count_plays = 0  
+let count_plays = 0
+
+let scores = {
+    X: 0,
+    O: 0
+}
 
 const startGame = () => {
     boxes.forEach(box => box.addEventListener('click', boxClicked))
@@ -21,11 +26,12 @@ function boxClicked(e) {
         spaces[id] = currentPlayer
         e.target.innerText = currentPlayer
 
-        if(playerHasWon() !==false){
+        if(playerHasWon() !== false) {
             playerText.innerHTML = `Status: ${currentPlayer} has won!`
             let winning_blocks = playerHasWon()
             count_plays = 10
-            winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator)
+            winning_blocks.map(box => boxes[box].style.backgroundColor = winnerIndicator)
+            scoreUpdate(currentPlayer); // Pass the currentPlayer to scoreUpdate
             return
         }
         count_plays++
@@ -65,15 +71,19 @@ restartBtn.addEventListener('click', restart)
 function restart() {
     spaces.fill(null)
     count_plays = 0
-    boxes.forEach( box => {
+    boxes.forEach(box => {
         box.innerText = ''
-        box.style.backgroundColor=''
+        box.style.backgroundColor = ''
         box.style.color = '#f2c14e'
     })
 
     playerText.innerHTML = 'Status: None'
-
     currentPlayer = X_TEXT
+}
+
+function scoreUpdate(turn){
+    scores[turn]++;
+    document.getElementById('score-' + turn).innerHTML = scores[turn];
 }
 
 startGame()
