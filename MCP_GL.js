@@ -28,7 +28,7 @@ function boxClicked(e) {
         e.target.innerText = currentPlayer
 
         if(playerHasWon() !== false) {
-            playerText.innerHTML = `Status: ${currentPlayer} has won!`
+            playerText.innerHTML = `Status: Player ${currentPlayer} has won!`
             let winning_blocks = playerHasWon()
             count_plays = 10
             winning_blocks.map(box => boxes[box].style.backgroundColor = winnerIndicator)
