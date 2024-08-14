@@ -7,6 +7,7 @@ let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winnin
 const O_TEXT = "O"
 const X_TEXT = "X"
 let currentPlayer = X_TEXT
+let nextPlayer = O_TEXT
 let spaces = Array(9).fill(null)
 let count_plays = 0
 
