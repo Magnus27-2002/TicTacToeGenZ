@@ -11,11 +11,15 @@
 
 body {
     color: var(--gold);
-    font-family: "Matemasie", sans-serif;
+    font-family: 'Finger Paint';
 }
 h1 {
-    font-size: 54px;
+    font-size: 55px;
     text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 .container {
@@ -25,14 +29,14 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #223673;
+    background-color: #0a1842;
 }
 
 #gameboard {
     width: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .box {
     height: 100px;
@@ -60,6 +64,7 @@ button {
     font-size: 18px;
     transition: 200ms transform;
     font-weight: 600;
+    margin-top: 40px;
 }
 button:hover {
     cursor: pointer;

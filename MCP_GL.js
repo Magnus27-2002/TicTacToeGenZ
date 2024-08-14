@@ -1,4 +1,4 @@
-let playerText = document.getElementById('playerText')
+let playerText = document.getElementById('playerStatus')
 let restartBtn = document.getElementById('restartBtn')
 let boxes = Array.from(document.getElementsByClassName('box'))
 
@@ -22,7 +22,7 @@ function boxClicked(e) {
         e.target.innerText = currentPlayer
 
         if(playerHasWon() !==false){
-            playerText.innerHTML = `${currentPlayer} has won!`
+            playerText.innerHTML = `Status: ${currentPlayer} has won!`
             let winning_blocks = playerHasWon()
             count_plays = 10
             winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator)
@@ -33,7 +33,7 @@ function boxClicked(e) {
     }
 
     if(count_plays === 9) {
-        playerText.innerHTML = 'Game Draw!'
+        playerText.innerHTML = 'Status: Game Draw!'
         boxes.forEach(box => box.style.color = 'red')
     }
 }
@@ -71,7 +71,7 @@ function restart() {
         box.style.color = '#f2c14e'
     })
 
-    playerText.innerHTML = 'Tic Tac Toe'
+    playerText.innerHTML = 'Status: None'
 
     currentPlayer = X_TEXT
 }
