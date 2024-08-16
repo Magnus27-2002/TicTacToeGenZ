@@ -5,7 +5,7 @@
 }
 
 :root {
-    --gold: #FFD700;
+    --gold: #F5BD02;
     --winning-blocks: #2d414b;
 }
 
@@ -29,7 +29,11 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #0a1842;
+    background-image: url(BGttt3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #gameboard {
@@ -65,9 +69,9 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--gold);
-    color: #333;
+    color: #16224A;
     border-color: var(--gold);
-    font-size: 18px;
+    font-size: 20px;
     transition: 200ms transform;
     font-weight: 600;
     margin-top: 20px;
