@@ -43,7 +43,7 @@ function boxClicked(e) {
     }
 
     if(count_plays === 9) {
-        playerText.innerHTML = 'Status: Game Draw! Both player Lose'
+        playerText.innerHTML = 'Status: Game Draw! Both Player Lose'
         boxes.forEach(box => box.style.color = 'red')
         resetScores(); // Reset the scores when the game is a draw
         gameOver = true; // Set gameOver to true when the game ends in a draw
