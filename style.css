@@ -69,12 +69,13 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--gold);
-    color: #16224A;
+    color: #020c2d;
     border-color: var(--gold);
     font-size: 20px;
     transition: 200ms transform;
     font-weight: 600;
     margin-top: 20px;
+    font-family: "Merriweather", serif;
 }
 button:hover {
     cursor: pointer;
