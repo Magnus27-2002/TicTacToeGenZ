@@ -11,7 +11,7 @@
 
 body {
     color: var(--gold);
-    font-family: 'Finger Paint';
+    font-family: "Merriweather", serif;
 }
 h1 {
     font-size: 55px;
