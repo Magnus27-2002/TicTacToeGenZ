@@ -6,7 +6,7 @@ The game **_Tic-Tac-Toe GenZ_** is inspired by the standard Tic-Tac-Toe game but
 To launch the game in your browser, simply extract, clone the repository, or download the zip file from the code section, unzip the folder, choose the unzipped folder, double-click the "index.html" file, or drag the HTML file into your browser <sub> I used Google Chrome as default browser </sub>.
 ## **Technical Dependencies**
 To run and modify it on Visual Studio Code, install the **_Live Server_** extension, after installing the extension, right-click on the "index.html" file and click on **_Open with Live Server_**. This will allow you to make changes to the game in real time.
-## **Compatibiliy Information**
+## **Compatibility Information**
 As long as the following criteria are satisfied, executing HTML, CSS, and JavaScript code from this repository should generally work without any compatibility problems:
 
 + Relative Paths: Particularly if the code was moved from one directory structure to another, make sure that all file paths (such as images, scripts, and stylesheets) are correctly referenced.
