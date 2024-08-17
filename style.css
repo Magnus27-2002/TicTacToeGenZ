@@ -1,83 +1,88 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; /* Removes default padding from all elements */
+    margin: 0; /* Removes default margin from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included within the element's total width and height */
 }
 
 :root {
-    --gold: #F5BD02;
-    --winningBlocks: #2d414b;
+    --gold: #F5BD02; /* Defines a CSS variable for a gold color */
+    --winningBlocks: #2d414b; /* Defines a CSS variable for the color of the winning blocks */
 }
 
 body {
-    color: var(--gold);
-    font-family: "Merriweather", serif;
+    color: var(--gold); /* Sets the text color of the body to the gold variable */
+    font-family: "Merriweather", serif; /* Uses the Merriweather font with serif */
 }
+
 h1 {
-    font-size: 55px;
-    text-transform: uppercase;
+    font-size: 55px; /* Sets the font size of h1 elements to 55 pixels */
+    text-transform: uppercase; /* Converts the text of h1 elements to uppercase */
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 30px; /* Sets the font size of h2 elements to 30 pixels */
 }
 
 .container {
-    padding: 40px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: url(BGttt3.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    padding: 40px; /* Adds 40 pixels of padding inside the container */
+    height: 100vh; /* Sets the height of the container to 100% of the viewport height */
+    display: flex; /* Uses flexbox layout for the container */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    flex-direction: column; /* Arranges the content in a column */
+    background-image: url(BGttt3.jpg); /* Sets a background image for the container */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+    background-size: cover; /* Scales the background image to cover the entire container */ /* backgrounds are used to make the webpage responsive*/
 }
 
 #gameboard {
-    width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
+    width: 300px; /* Sets the width of the gameboard to 300 pixels */
+    display: flex; /* Uses flexbox layout for the gameboard */
+    flex-wrap: wrap; /* Allows the gameboard content to wrap onto the next line */
+    margin-top: 50px; /* Adds a 50-pixel margin above the gameboard */
 }
+
 .box {
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-    font-size: 120px;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
+    height: 100px; /* Sets the height of each box to 100 pixels */
+    width: 100px; /* Sets the width of each box to 100 pixels */
+    display: flex; /* Uses flexbox layout for each box */
+    align-items: center; /* Centers the content of each box vertically */
+    justify-content: center; /* Centers the content of each box horizontally */
+    color: var(--gold); /* Sets the text color of each box to the gold variable */
+    font-size: 120px; /* Sets the font size of the text in each box to 120 pixels */
+    border-right: 2px solid; /* Adds a 2-pixel solid border on the right side of each box */
+    border-bottom: 2px solid; /* Adds a 2-pixel solid border on the bottom of each box */
 }
+
 .box:nth-child(3n) {
-    border-right: none;
+    border-right: none; /* Removes the right border for every third box to create a grid effect */
 }
+
 .box:nth-child(6) ~ .box {
-    border-bottom: none;
+    border-bottom: none; /* Removes the bottom border for the last row of boxes */
 } 
 
 .score-card {
-    margin-top: 25px;
-    font-size: 20px;
+    margin-top: 25px; /* Adds a 25-pixel margin above the score card */
+    font-size: 20px; /* Sets the font size of the score card text to 20 pixels */
 }
 
 button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: var(--gold);
-    color: #020c2d;
-    border-color: var(--gold);
-    font-size: 20px;
-    transition: 200ms transform;
-    font-weight: 600;
-    margin-top: 20px;
-    font-family: "Merriweather", serif;
+    padding: 10px 20px; /* Adds 10 pixels of padding on the top and bottom, and 20 pixels on the sides */
+    border-radius: 10px; /* Rounds the corners of the button with a 10-pixel radius */
+    background-color: var(--gold); /* Sets the background color of the button to the gold variable */
+    color: #020c2d; /* Sets the text color of the button to a dark blue */
+    border-color: var(--gold); /* Sets the border color of the button to the gold variable */
+    font-size: 20px; /* Sets the font size of the button text to 20 pixels */
+    transition: 200ms transform; /* Smoothly transitions the button's transform property over 200 milliseconds */
+    font-weight: 600; /* Sets the font weight of the button text to 600 (bold) */
+    margin-top: 20px; /* Adds a 20-pixel margin above the button */
+    font-family: "Merriweather", serif; /* Uses the Merriweather font with serif fallback */
 }
+
 button:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    transform: translateY(-2px); /* Slightly raises the button when hovered by translating it 2 pixels up */
 }
