@@ -1,15 +1,14 @@
 let playerText = document.getElementById('playerStatus')
-let restartBtn = document.getElementById('restartBtn')
-let boxes = Array.from(document.getElementsByClassName('box'))
+let restartButtn = document.getElementById('restartButton')
+let gameBoard = Array.from(document.getElementsByClassName('box'))
 
-let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-blocks')
+let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winningBlocks')
 
-const O_TEXT = "O"
-const X_TEXT = "X"
-let currentPlayer = X_TEXT
-let nextPlayer = O_TEXT
+const PlayerO = "O"
+const PlayerX = "X"
+let currentPlayer = PlayerX
 let spaces = Array(9).fill(null)
-let count_plays = 0
+let countPlays = 0
 
 let gameOver = false; // New flag to track if the game is over
 
@@ -18,39 +17,39 @@ let scores = {
     O: 0
 }
 
-const startGame = () => {
-    boxes.forEach(box => box.addEventListener('click', boxClicked))
+const gameStart = () => {
+    gameBoard.forEach(box => box.addEventListener('click', boxClicked))
 }
 
 function boxClicked(e) {
     const id = e.target.id
 
-    if(!spaces[id] && count_plays < 9) {
+    if(!spaces[id] && countPlays < 9) {
         spaces[id] = currentPlayer
         e.target.innerText = currentPlayer
 
-        if(playerHasWon() !== false) {
+        if(playerWon() !== false) {
             playerText.innerHTML = `Status: Player ${currentPlayer} has won!`
-            let winning_blocks = playerHasWon()
-            count_plays = 10
-            winning_blocks.map(box => boxes[box].style.backgroundColor = winnerIndicator)
+            let winning_blocks = playerWon()
+            countPlays = 10
+            winning_blocks.map(box => gameBoard[box].style.backgroundColor = winnerIndicator)
             scoreUpdate(currentPlayer); // Pass the currentPlayer to scoreUpdate
             gameOver = true; // Set gameOver to true when a player wins
             return
         }
-        count_plays++
-        currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
+        countPlays++
+        currentPlayer = currentPlayer == PlayerX ? PlayerO : PlayerX
     }
 
-    if(count_plays === 9) {
+    if(countPlays === 9) {
         playerText.innerHTML = 'Status: Game Draw! Both Player Lose'
-        boxes.forEach(box => box.style.color = 'red')
+        gameBoard.forEach(box => box.style.color = 'red')
         resetScores(); // Reset the scores when the game is a draw
         gameOver = true; // Set gameOver to true when the game ends in a draw
     }
 }
 
-const winningCombos = [
+const winCombos = [
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -61,8 +60,8 @@ const winningCombos = [
     [2,4,6]
 ]
 
-function playerHasWon() {
-    for (const condition of winningCombos) {
+function playerWon() {
+    for (const condition of winCombos) {
         let [a, b, c] = condition
 
         if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
@@ -72,25 +71,25 @@ function playerHasWon() {
     return false
 }
 
-restartBtn.addEventListener('click', restart)
+restartButtn.addEventListener('click', restart)
 
 function restart() {
-    if (count_plays >= 2 && !gameOver) {
-        playerText.innerHTML = 'Status: Cannot restart after two clicked boxes unless the game is over!'
+    if (countPlays >= 2 && !gameOver) {
+        playerText.innerHTML = 'Status: Cannot restart after two clicked gameBoard unless the game is over!'
         return
     }
     
     spaces.fill(null)
-    count_plays = 0
+    countPlays = 0
     gameOver = false; // Reset gameOver flag
-    boxes.forEach(box => {
+    gameBoard.forEach(box => {
         box.innerText = ''
         box.style.backgroundColor = ''
         box.style.color = '#f2c14e'
     })
 
     playerText.innerHTML = 'Status: None'
-    currentPlayer = X_TEXT
+    currentPlayer = PlayerX
 }
 
 function scoreUpdate(turn){
@@ -105,4 +104,4 @@ function resetScores() {
     document.getElementById('score-O').innerHTML = scores.O;
 }
 
-startGame()
+gameStart()
