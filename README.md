@@ -1,7 +1,7 @@
 # **Tic-Tac-Toe GenZ**
 By Marco C. Pilaming
 ## **Game Overview**
-The game **_Tic-Tac-Toe GenZ_** is inspired by the standard Tic-Tac-Toe game but with a twist. The twist of the game is to **_not attempt a draw, or else the score board will return to zero_**, meaning that **_both players lose the game_**. Players must think and use their strategies to avoid having a draw and gaining points. Also, if you think of **_restarting_** the game after clicking more than one cell, **_you cannot_**; you have to finish filling up the cells until the game is done.
+The game **_Tic-Tac-Toe GenZ_** is inspired by the standard Tic-Tac-Toe game but with a twist. The twist of the game is to **_not attempt a draw, or else the score board will return to zero_**, meaning that **_both players lose the game_**. Players must think and use their strategies to gain points and to avoid having a draw. Also, if you think of **_restarting_** the game after clicking more than one cell, **_you cannot_**; you have to finish filling up the cells until the game is done.
 ### **Set-Up Instructions**
 To launch the game in your browser, simply extract, clone the repository, or download the zip file from the code section, unzip the folder, choose the unzipped folder, double-click the "index.html" file, or drag the HTML file into your browser <sub> I used Google Chrome as default browser </sub>.
 ### **Technical Dependencies**
