@@ -13,6 +13,6 @@ As long as the following criteria are satisfied, executing HTML, CSS, and JavaSc
 
 + **Browser Plugins or Extensions:** If you experience issues with the way HTML, CSS, and JavaScript are executed, make sure your plugins and extensions are turned off (if necessary).
 
-+ **Dalton Extension:** Works in real-time and is designed for color-blind users. It is compatible with the game setup and does not interfere with the user experience in any way.
++ **Dalton Extension:** Works in real-time and is designed for color-blind users. It is compatible with the game set-up and does not interfere with the user experience in any way.
 
 If these requirements are met, the code should work properly in the majority of modern browsers. In many cases, you can fix specific problems by looking for error messages in the browser's developer console.
