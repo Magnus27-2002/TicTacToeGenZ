@@ -9,8 +9,10 @@ To run and modify it on Visual Studio Code, install the **_Live Server_** extens
 ## **Compatibility Information**
 As long as the following criteria are satisfied, executing HTML, CSS, and JavaScript code from this repository should generally work without any compatibility problems:
 
-+ Relative Paths: Particularly if the code was moved from one directory structure to another, make sure that all file paths (such as images, scripts, and stylesheets) are correctly referenced.
++ **Relative Paths:** Particularly if the code was moved from one directory structure to another, make sure that all file paths (such as images, scripts, and stylesheets) are correctly referenced.
 
-+ Browser Plugins or Extensions: If you experience issues with the way HTML, CSS, and JavaScript are executed, make sure your plugins and extensions are turned off (if necessary).
++ **Browser Plugins or Extensions:** If you experience issues with the way HTML, CSS, and JavaScript are executed, make sure your plugins and extensions are turned off (if necessary).
+
++ **Dalton Extension:** Works in real-time and is designed for color-blind users. It is compatible with the game setup and does not interfere with the user experience in any way.
 
 If these requirements are met, the code should work properly in the majority of modern browsers. In many cases, you can fix specific problems by looking for error messages in the browser's developer console.
